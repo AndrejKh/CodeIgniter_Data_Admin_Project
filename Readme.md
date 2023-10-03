@@ -1,7 +1,7 @@
-**该应用基于 Codeigniter 3.0.6 框架开发, 是一个数据管理类后台, 支持内容模型和分类模型的自定义和扩展.**
+**This application is developed based on the Codeigniter 3.0.6 framework. It is a data management backend that supports the customization and expansion of content models and classification models.**
 
-支持后台建数据表(内容模型/分类模型), 表的字段配置对应mysql数据库字段, 表现形式上对应html各种标签; 基于RBAC权限管理, 可在最细颗粒度上对模型操作权限做控制;
+Supports the creation of data tables (content model/classification model) in the background. The field configuration of the table corresponds to the mysql database field, and the representation corresponds to various HTML tags; based on RBAC permission management, model operation permissions can be controlled at the finest granularity;
 
-在php7下运行的一个bug, session不会自动启动, 修改入口文件index.php, 加上session_start();
+There is a bug when running under php7. The session will not start automatically. Modify the entry file index.php and add session_start();
 
-> 注意：在`application/core/MY_Model.php`, 用户定义的模型类不要继承`MY_Model`, 而是直接继承`CI_Model`, 因为`MY_Model`中, `$this->db->conn_id`尚未初始化;
+> Note: In `application/core/MY_Model.php`, the user-defined model class should not inherit `MY_Model`, but directly inherit `CI_Model`, because in `MY_Model`, `$this->db->conn_id` has not yet been initialization;
